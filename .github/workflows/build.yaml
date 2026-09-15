@@ -50,7 +50,7 @@ jobs:
             continue
           fi
           
-          BUILD_NUM=$(echo $VERSION | grep -oE '[0-9]{4}$')
+          BUILD_NUM=$(echo $VERSION | grep -oE '[0-9]+$')
           
           if [[ ! -z "$BUILD_NUM" ]] && [[ $BUILD_NUM -ge $MIN_BUILD_NUMBER ]]; then
             echo "Including version: $tag (build $BUILD_NUM)"
